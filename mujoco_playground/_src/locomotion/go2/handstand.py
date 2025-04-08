@@ -25,8 +25,8 @@ import numpy as np
 
 from mujoco_playground._src import collision
 from mujoco_playground._src import mjx_env
-from mujoco_playground._src.locomotion.go1 import base as go1_base
-from mujoco_playground._src.locomotion.go1 import go1_constants as consts
+from mujoco_playground._src.locomotion.go2 import base as go2_base
+from mujoco_playground._src.locomotion.go2 import go2_constants as consts
 
 
 def default_config() -> config_dict.ConfigDict:
@@ -70,8 +70,8 @@ def default_config() -> config_dict.ConfigDict:
   )
 
 
-class Handstand(go1_base.Go1Env):
-  """Handstand task for Go1."""
+class Handstand(go2_base.Go2Env):
+  """Handstand task for Go2."""
 
   def __init__(
       self,
@@ -376,7 +376,7 @@ class Handstand(go1_base.Go1Env):
 
 
 class Footstand(Handstand):
-  """Footstand task for Go1."""
+  """Footstand task for Go2."""
 
   def _post_init(self) -> None:
     super()._post_init()
@@ -396,11 +396,7 @@ class Footstand(Handstand):
         "rr_calf1",
         "rr_calf2",
         "rl_thigh1",
-        "rl_thigh2",
-        "rl_thigh3",
         "rr_thigh1",
-        "rr_thigh2",
-        "rr_thigh3",
         "rl_hip",
         "rr_hip",
     ]
