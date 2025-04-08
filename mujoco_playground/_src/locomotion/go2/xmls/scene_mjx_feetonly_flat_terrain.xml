@@ -1,5 +1,5 @@
 <mujoco model="go2 feetonly flat terrain scene">
-  <include file="go2_mjx_feetonly.xml"/>
+  <include file="go2_mjx_feetonly2.xml"/>
 
   <statistic center="0 0 0.1" extent="0.8" meansize="0.04"/>
 
@@ -25,15 +25,13 @@
   </worldbody>
 
   <keyframe>
-      <!-- <key name="home" qpos="0 0 0.27 1 0 0 0 0 0.9 -1.8 0 0.9 -1.8 0 0.9 -1.8 0 0.9 -1.8"
-      ctrl="0 0.9 -1.8 0 0.9 -1.8 0 0.9 -1.8 0 0.9 -1.8"/> -->
     <key name="home" qpos="
-    0 0 0.278
-    1 0 0 0
-    0.1 0.9 -1.8
-    -0.1 0.9 -1.8
-    0.1 0.9 -1.8
-    -0.1 0.9 -1.8"
+      0 0 0.278
+      1 0 0 0
+      0.1 0.9 -1.8
+      -0.1 0.9 -1.8
+      0.1 0.9 -1.8
+      -0.1 0.9 -1.8"
       ctrl="0.1 0.9 -1.8 -0.1 0.9 -1.8 0.1 0.9 -1.8 -0.1 0.9 -1.8"/>
     <key name="home_higher" qpos="0 0 0.31 1 0 0 0 0 0.82 -1.63 0 0.82 -1.63 0 0.82 -1.63 0 0.82 -1.63"
       ctrl="0 0.82 -1.63 0 0.82 -1.63 0 0.82 -1.63 0 0.82 -1.63"/>
