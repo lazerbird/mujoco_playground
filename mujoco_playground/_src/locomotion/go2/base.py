@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-"""Base classes for Go1."""
+"""Base classes for Go2."""
 
 from typing import Any, Dict, Optional, Union
 
@@ -38,7 +38,7 @@ def get_assets() -> Dict[str, bytes]:
 
 
 class Go2Env(mjx_env.MjxEnv):
-  """Base class for Go1 environments."""
+  """Base class for Go2 environments."""
 
   def __init__(
       self,

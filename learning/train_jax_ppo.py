@@ -14,6 +14,13 @@
 # ==============================================================================
 """Train a PPO agent using JAX on the specified environment."""
 
+"""
+export MUJOCO_GL="egl"
+
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so 
+xvfb-run -a -s "-screen 0 1400x900x24" bash
+"""
+
 from datetime import datetime
 import functools
 import json
@@ -413,7 +420,7 @@ def main(argv):
   scene_option.flags[mujoco.mjtVisFlag.mjVIS_CONTACTFORCE] = False
 
   frames = eval_env.render(
-      traj, height=480, width=640, scene_option=scene_option
+      traj, height=480, width=640, scene_option=scene_option, camera='track'
   )
   media.write_video("rollout.mp4", frames, fps=fps)
   print("Rollout video saved as 'rollout.mp4'.")

@@ -58,7 +58,7 @@ def brax_ppo_config(env_name: str) -> config_dict.ConfigDict:
         value_obs_key="privileged_state",
     )
 
-  elif env_name in ("Go1Handstand", "Go1Footstand"):
+  elif env_name in ("Go1Handstand", "Go1Footstand", "Go2Handstand", "Go2Footstand"):
     rl_config.num_timesteps = 100_000_000
     rl_config.num_evals = 5
     rl_config.network_factory = config_dict.create(
@@ -79,7 +79,7 @@ def brax_ppo_config(env_name: str) -> config_dict.ConfigDict:
         value_obs_key="privileged_state",
     )
 
-  elif env_name == "Go1Getup":
+  elif env_name in ("Go1Getup", "Go2Getup"):
     rl_config.num_timesteps = 50_000_000
     rl_config.num_evals = 5
     rl_config.network_factory = config_dict.create(
@@ -202,7 +202,7 @@ def rsl_rl_config(env_name: str) -> config_dict.ConfigDict:
       "Go2JoystickFlatTerrain"
   ):
     rl_config.max_iterations = 1000
-  if env_name == "Go1JoystickFlatTerrain" or env_name == "Go2JoystickFlatTerrain":
+  if env_name in ("Go1JoystickFlatTerrain", "Go2JoystickFlatTerrain"):
     rl_config.algorithm.learning_rate = 3e-4
     rl_config.algorithm.schedule = "fixed"
 

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-"""Fall recovery task for the Go1."""
+"""Fall recovery task for the Go2."""
 
 from typing import Any, Dict, Optional, Union
 
@@ -23,8 +23,8 @@ from mujoco import mjx
 import numpy as np
 
 from mujoco_playground._src import mjx_env
-from mujoco_playground._src.locomotion.go1 import base as go1_base
-from mujoco_playground._src.locomotion.go1 import go1_constants as consts
+from mujoco_playground._src.locomotion.go2 import base as go2_base
+from mujoco_playground._src.locomotion.go2 import go2_constants as consts
 
 
 def default_config() -> config_dict.ConfigDict:
@@ -65,7 +65,7 @@ def default_config() -> config_dict.ConfigDict:
   )
 
 
-class Getup(go1_base.Go1Env):
+class Getup(go2_base.Go2Env):
   """Recover from a fall and stand up.
 
   Observation space:
