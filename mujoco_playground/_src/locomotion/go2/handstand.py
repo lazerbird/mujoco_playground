@@ -120,11 +120,7 @@ class Handstand(go2_base.Go2Env):
         "fr_calf1",
         "fr_calf2",
         "fl_thigh1",
-        "fl_thigh2",
-        "fl_thigh3",
         "fr_thigh1",
-        "fr_thigh2",
-        "fr_thigh3",
         "fl_hip",
         "fr_hip",
     ]
