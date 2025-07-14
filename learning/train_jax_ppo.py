@@ -19,6 +19,8 @@ export MUJOCO_GL="egl"
 
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so 
 xvfb-run -a -s "-screen 0 1400x900x24" bash
+
+export JAX_DEFAULT_MATMUL_PRECISION=highest
 """
 
 from datetime import datetime
